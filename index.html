@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&E Servicios SpA | Servicio Técnico Náutico e Industrial</title>
+    
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#0f172a',    // Azul marino oscuro
-                            primary: '#1e3a8a', // Azul corporativo
-                            accent: '#0ea5e9',  // Celeste vibrante (llamativo)
-                            light: '#f8fafc'    // Fondo claro
+                            dark: '#0f172a',
+                            primary: '#1e3a8a',
+                            accent: '#00d2ff',
+                            light: '#f8fafc'
                         }
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
-                        'about-pattern': "url('https://images.unsplash.com/photo-1580901368919-7738efb0f878?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"
+                        /* Imágenes actualizadas: Fondo de lancha/mar y herramientas mecánicas */
+                        'hero-pattern': "linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1569263980341-356c9d0d3463?auto=format&fit=crop&w=1920&q=80')",
+                        'about-pattern': "url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80')"
                     }
                 }
             }
@@ -30,13 +38,13 @@
         html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-brand-light text-gray-800 font-sans antialiased">
+<body class="bg-brand-light text-gray-800 font-sans antialiased overflow-x-hidden">
 
     <div class="bg-brand-dark text-gray-300 text-sm py-2 hidden md:block">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="flex space-x-6">
-                <span><i class="fas fa-envelope text-brand-accent mr-2"></i> contacto@deservicios.cl</span>
-                <span><i class="fas fa-phone text-brand-accent mr-2"></i> +56 9 1234 5678</span>
+                <span><i class="fas fa-envelope text-brand-accent mr-2"></i> Dyeservicios24@gmail.com</span>
+                <span><i class="fas fa-phone text-brand-accent mr-2"></i> +56 9 9269 1700</span>
             </div>
             <div>
                 <span><i class="fas fa-clock text-brand-accent mr-2"></i> Lun - Vie: 8:30 a 18:30</span>
@@ -45,15 +53,20 @@
     </div>
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-brand-primary tracking-tight">
-                D&E <span class="text-brand-accent">SERVICIOS</span> SPA
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-4">
+                <img src="logo.jpeg" alt="Logo D&E Servicios" class="h-16 w-16 object-cover rounded-full shadow-md border-2 border-brand-accent">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold text-brand-primary tracking-tight leading-none">D&E <span class="text-brand-accent">SERVICIOS</span></span>
+                    <span class="text-xs font-bold text-gray-500 tracking-widest">SPA</span>
+                </div>
             </a>
+            
             <div class="hidden md:flex space-x-8 items-center font-semibold text-gray-700">
                 <a href="#inicio" class="hover:text-brand-accent transition">Inicio</a>
                 <a href="#nosotros" class="hover:text-brand-accent transition">Nosotros</a>
                 <a href="#servicios" class="hover:text-brand-accent transition">Servicios</a>
-                <a href="#contacto" class="bg-brand-primary text-white px-6 py-2 rounded-md hover:bg-brand-accent transition shadow-lg">
+                <a href="#contacto" class="bg-brand-primary text-white px-6 py-2 rounded-md hover:bg-brand-accent transition shadow-lg hover:scale-105 duration-300">
                     Contactar
                 </a>
             </div>
@@ -62,40 +75,40 @@
 
     <header id="inicio" class="bg-hero-pattern bg-cover bg-center bg-no-repeat text-white py-32 md:py-48">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-lg md:text-2xl font-semibold text-brand-accent mb-4 uppercase tracking-widest">Servicio Técnico Especializado</h2>
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">Expertos en el Área <br>Náutica e Industrial</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-200">
+            <h2 data-aos="fade-down" data-aos-duration="1000" class="text-lg md:text-2xl font-semibold text-brand-accent mb-4 uppercase tracking-widest">Mantención y Reparación</h2>
+            <h1 data-aos="zoom-in" data-aos-duration="1200" class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">Motores Marinos <br>e Industriales</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-200">
                 Garantizamos el máximo rendimiento de tus equipos con reparaciones y mantenciones de alta precisión.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#servicios" class="bg-brand-accent text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-brand-primary transition shadow-lg">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#servicios" class="bg-brand-accent text-brand-dark font-bold py-4 px-8 rounded hover:bg-white hover:text-brand-primary transition shadow-lg hover:-translate-y-1">
                     Ver Servicios
                 </a>
-                <a href="#contacto" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-brand-primary transition shadow-lg">
+                <a href="#contacto" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-brand-primary transition shadow-lg hover:-translate-y-1">
                     Solicitar Cotización
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-12 bg-white relative -mt-10 z-10 container mx-auto px-4 rounded-lg shadow-xl max-w-5xl hidden md:block">
+    <section class="py-12 bg-white relative -mt-10 z-10 container mx-auto px-4 rounded-lg shadow-xl max-w-5xl hidden md:block" data-aos="fade-up" data-aos-duration="1000">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 divide-x divide-gray-200 text-center">
             <div class="p-6">
-                <i class="fas fa-bullseye text-4xl text-brand-accent mb-4"></i>
+                <i class="fas fa-bullseye text-4xl text-brand-accent mb-4 transform hover:scale-110 transition duration-300"></i>
                 <h3 class="text-2xl font-bold text-brand-primary mb-3">Nuestra Misión</h3>
                 <p class="text-gray-600">Prestar un servicio integral y de excelencia en el área técnica náutica e industrial, priorizando un trabajo ágil, de calidad y la total satisfacción de nuestros clientes.</p>
             </div>
             <div class="p-6">
-                <i class="fas fa-eye text-4xl text-brand-accent mb-4"></i>
+                <i class="fas fa-eye text-4xl text-brand-accent mb-4 transform hover:scale-110 transition duration-300"></i>
                 <h3 class="text-2xl font-bold text-brand-primary mb-3">Nuestra Visión</h3>
                 <p class="text-gray-600">Ser la empresa líder y consolidada en el sur de Chile en mantención y reparación de equipos marinos e industriales, adaptándonos constantemente a las nuevas tecnologías.</p>
             </div>
         </div>
     </section>
 
-    <section id="nosotros" class="py-20 container mx-auto px-4">
+    <section id="nosotros" class="py-20 container mx-auto px-4 overflow-hidden">
         <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
+            <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
                 <h4 class="text-brand-accent font-bold uppercase tracking-wide mb-2">Acerca de la Empresa</h4>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-brand-primary mb-6">Compromiso y Experiencia en Terreno</h2>
                 <p class="text-gray-600 mb-6 leading-relaxed">
@@ -105,13 +118,13 @@
                     Contamos con personal altamente calificado para resolver problemas complejos en motores, compresores y generadores, asegurando que tus operaciones nunca se detengan y cumpliendo con los más altos estándares de seguridad.
                 </p>
                 <ul class="space-y-3 text-gray-700 font-semibold mb-8">
-                    <li><i class="fas fa-check-circle text-brand-accent mr-3"></i> Diagnóstico computarizado y preciso.</li>
-                    <li><i class="fas fa-check-circle text-brand-accent mr-3"></i> Respuestos de primera calidad.</li>
-                    <li><i class="fas fa-check-circle text-brand-accent mr-3"></i> Atención en terreno y taller propio.</li>
+                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-check-circle text-brand-accent mr-3"></i> Diagnóstico computarizado y preciso.</li>
+                    <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-check-circle text-brand-accent mr-3"></i> Respuestos de primera calidad.</li>
+                    <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-check-circle text-brand-accent mr-3"></i> Atención en terreno y taller propio.</li>
                 </ul>
             </div>
-            <div class="md:w-1/2 h-96 bg-about-pattern bg-cover bg-center rounded-lg shadow-2xl relative">
-                <div class="absolute -bottom-6 -left-6 bg-brand-primary text-white p-6 rounded-lg shadow-xl">
+            <div class="md:w-1/2 h-96 bg-about-pattern bg-cover bg-center rounded-lg shadow-2xl relative" data-aos="fade-left" data-aos-duration="1000">
+                <div class="absolute -bottom-6 -left-6 bg-brand-primary text-white p-6 rounded-lg shadow-xl" data-aos="zoom-in" data-aos-delay="400">
                     <span class="block text-3xl font-bold">100%</span>
                     <span class="text-sm">Garantía de Calidad</span>
                 </div>
@@ -119,55 +132,54 @@
         </div>
     </section>
 
-    <section id="servicios" class="py-20 bg-gray-100">
+    <section id="servicios" class="py-20 bg-gray-100 overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h4 class="text-brand-accent font-bold uppercase tracking-wide mb-2">Áreas de Especialidad</h4>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-brand-primary">Nuestros Servicios</h2>
                 <div class="w-24 h-1 bg-brand-accent mx-auto mt-4"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="100">
                     <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1572008688439-d5c4118a8047?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Motor fuera de borda" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute inset-0 bg-brand-primary opacity-20 group-hover:opacity-0 transition"></div>
+                        <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=600&q=80" alt="Motor fuera de borda" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <i class="fas fa-ship text-3xl text-brand-accent mb-4"></i>
+                        <i class="fas fa-ship text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
                         <h4 class="text-xl font-bold mb-3 text-brand-primary">Motores Fuera de Borda</h4>
                         <p class="text-gray-600 text-sm">Reparación, overhauls, diagnóstico electrónico y mantención preventiva multimarca.</p>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="200">
                     <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1584989632863-71a7d6569106?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Compresor de buceo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1601142634808-38923eb7c560?auto=format&fit=crop&w=600&q=80" alt="Compresor de buceo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <i class="fas fa-water text-3xl text-brand-accent mb-4"></i>
+                        <i class="fas fa-water text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
                         <h4 class="text-xl font-bold mb-3 text-brand-primary">Compresores de Buceo</h4>
                         <p class="text-gray-600 text-sm">Mantención completa, cambios de aceite, filtros y pruebas de presión para aire puro.</p>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="300">
                     <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1616422285623-1469e38f90ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hidrolavadora" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1620023640244-2f22b8214db2?auto=format&fit=crop&w=600&q=80" alt="Hidrolavadora" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <i class="fas fa-spray-can text-3xl text-brand-accent mb-4"></i>
+                        <i class="fas fa-spray-can text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
                         <h4 class="text-xl font-bold mb-3 text-brand-primary">Hidrolavadoras</h4>
                         <p class="text-gray-600 text-sm">Reparación de bombas, sellos, válvulas y mangueras en equipos industriales de alta presión.</p>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="400">
                     <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Generador Diesel" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1536894371421-4835d03bbd6b?auto=format&fit=crop&w=600&q=80" alt="Generador Diesel" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <i class="fas fa-charging-station text-3xl text-brand-accent mb-4"></i>
+                        <i class="fas fa-charging-station text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
                         <h4 class="text-xl font-bold mb-3 text-brand-primary">Generadores Diésel</h4>
                         <p class="text-gray-600 text-sm">Mantenciones preventivas y correctivas para asegurar el suministro de energía continua.</p>
                     </div>
@@ -176,67 +188,68 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-20 relative bg-brand-dark text-white">
+    <section id="contacto" class="py-20 relative bg-brand-dark text-white overflow-hidden">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12 bg-white text-gray-800 rounded-2xl shadow-2xl overflow-hidden">
                 
-                <div class="lg:w-2/5 bg-brand-primary p-10 text-white flex flex-col justify-center">
+                <div class="lg:w-2/5 bg-brand-primary p-10 text-white flex flex-col justify-center" data-aos="fade-right" data-aos-duration="1000">
                     <h3 class="text-3xl font-bold mb-6">Información de Contacto</h3>
                     <p class="mb-8 text-blue-100">¿Tienes un equipo con problemas? Escríbenos o llámanos y nuestro equipo técnico se pondrá en contacto a la brevedad.</p>
                     
                     <div class="space-y-6">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4">
+                        <div class="flex items-center hover:translate-x-2 transition duration-300">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4 shrink-0">
                                 <i class="fas fa-map-marker-alt text-brand-accent text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Ubicación</h4>
-                                <p class="text-blue-100 text-sm">Puerto Montt, Región de Los Lagos</p>
+                                <p class="text-blue-100 text-sm">Pasaje San Francisco de Asís, La Vara S/N, Puerto Montt</p>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4">
+                        <div class="flex items-center hover:translate-x-2 transition duration-300">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4 shrink-0">
                                 <i class="fas fa-phone text-brand-accent text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Teléfono</h4>
-                                <p class="text-blue-100 text-sm">+56 9 1234 5678</p>
+                                <p class="text-blue-100 text-sm">+56 9 9269 1700</p>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4">
+                        <div class="flex items-center hover:translate-x-2 transition duration-300">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4 shrink-0">
                                 <i class="fas fa-envelope text-brand-accent text-xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Correo Electrónico</h4>
-                                <p class="text-blue-100 text-sm">contacto@deservicios.cl</p>
+                                <p class="text-blue-100 text-sm">Dyeservicios24@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:w-3/5 p-10">
+                <div class="lg:w-3/5 p-10" data-aos="fade-left" data-aos-duration="1000">
                     <h3 class="text-2xl font-bold text-brand-primary mb-6">Escríbenos tus Requerimientos</h3>
-                    <form>
+                    
+                    <form action="https://formspree.io/f/xvzbndrj" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-2">Nombre completo</label>
-                                <input type="text" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition">
+                                <input type="text" name="nombre" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition" placeholder="Ej. Juan Pérez">
                             </div>
                             <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
-                                <input type="tel" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition">
+                                <input type="tel" name="telefono" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition" placeholder="+56 9 9269 1700">
                             </div>
                         </div>
                         <div class="mb-6">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
-                            <input type="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition">
+                            <input type="email" name="email" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition" placeholder="tu@correo.com">
                         </div>
                         <div class="mb-6">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Servicio Requerido / Mensaje</label>
-                            <textarea class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition" rows="4" placeholder="Ej. Necesito mantención para un compresor..."></textarea>
+                            <textarea name="mensaje" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition" rows="4" placeholder="Ej. Necesito mantención para un motor..."></textarea>
                         </div>
-                        <button type="button" class="bg-brand-primary hover:bg-brand-accent text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full md:w-auto shadow-md">
+                        <button type="submit" class="bg-brand-primary hover:bg-brand-accent text-white font-bold py-3 px-8 rounded-lg transition duration-300 w-full md:w-auto shadow-md transform hover:-translate-y-1">
                             Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
                         </button>
                     </form>
@@ -247,22 +260,25 @@
 
     <footer class="bg-brand-dark pt-16 pb-8 border-t-4 border-brand-accent text-gray-400">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            <div>
-                <a href="#" class="text-2xl font-extrabold text-white tracking-tight mb-4 block">
-                    D&E <span class="text-brand-accent">SERVICIOS</span> SPA
+            <div data-aos="fade-up" data-aos-delay="100">
+                <a href="#" class="flex items-center gap-3 mb-4">
+                    <img src="logo.jpeg" alt="Logo D&E" class="h-10 w-10 rounded-full">
+                    <span class="text-2xl font-extrabold text-white tracking-tight">
+                        D&E <span class="text-brand-accent">SERVICIOS</span> SPA
+                    </span>
                 </a>
                 <p class="text-sm mb-4">Expertos en reparación, mantención y diagnóstico de equipos en el área náutica e industrial. Compromiso, agilidad y calidad en cada trabajo.</p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="200">
                 <h4 class="text-white font-bold text-lg mb-4">Servicios</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-brand-accent transition">Motores Fuera de Borda</a></li>
-                    <li><a href="#" class="hover:text-brand-accent transition">Compresores de Buceo</a></li>
-                    <li><a href="#" class="hover:text-brand-accent transition">Hidrolavadoras</a></li>
-                    <li><a href="#" class="hover:text-brand-accent transition">Generadores Diésel</a></li>
+                    <li><a href="#servicios" class="hover:text-brand-accent transition">Motores Fuera de Borda</a></li>
+                    <li><a href="#servicios" class="hover:text-brand-accent transition">Compresores de Buceo</a></li>
+                    <li><a href="#servicios" class="hover:text-brand-accent transition">Hidrolavadoras</a></li>
+                    <li><a href="#servicios" class="hover:text-brand-accent transition">Generadores Diésel</a></li>
                 </ul>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="text-white font-bold text-lg mb-4">Horario de Atención</h4>
                 <ul class="space-y-2 text-sm">
                     <li class="flex justify-between border-b border-gray-700 pb-1"><span>Lunes a Viernes</span> <span>8:30 - 18:30</span></li>
@@ -275,5 +291,13 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic',
+        });
+    </script>
 </body>
 </html>
