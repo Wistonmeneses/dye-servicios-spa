@@ -24,9 +24,7 @@
                         }
                     },
                     backgroundImage: {
-                        /* AQUÍ VAN TUS IMÁGENES LOCALES */
-                        'hero-pattern': "linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 58, 138, 0.7)), url('fondo-principal.jpg')",
-                        'about-pattern': "url('imagen-nosotros.jpg')"
+                        'hero-pattern': "linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 58, 138, 0.7)), url('fondo-principal.jpg')"
                     }
                 }
             }
@@ -36,16 +34,16 @@
         html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-brand-light text-gray-800 font-sans antialiased overflow-x-hidden">
+<body class="bg-brand-light text-gray-800 font-sans antialiased overflow-x-hidden relative">
 
     <div class="bg-brand-dark text-gray-300 text-sm py-2 hidden md:block">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="flex space-x-6">
-                <span><i class="fas fa-envelope text-brand-accent mr-2"></i> Dyeservicios24@gmail.com</span>
+                <span><i class="fas fa-envelope text-brand-accent mr-2"></i> dyeservicios24@gmail.com</span>
                 <span><i class="fas fa-phone text-brand-accent mr-2"></i> +56 9 9269 1700</span>
             </div>
             <div>
-                <span><i class="fas fa-clock text-brand-accent mr-2"></i> Lun - Vie: 8:30 a 18:30</span>
+                <span><i class="fas fa-clock text-brand-accent mr-2"></i> Lunes a Domingo: Abierto 24/7</span>
             </div>
         </div>
     </div>
@@ -121,7 +119,10 @@
                     <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-check-circle text-brand-accent mr-3"></i> Atención en terreno y taller propio.</li>
                 </ul>
             </div>
-            <div class="md:w-1/2 h-96 bg-about-pattern bg-cover bg-center rounded-lg shadow-2xl relative" data-aos="fade-left" data-aos-duration="1000">
+            
+            <div class="md:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000">
+                <img src="imagen-nosotros.jpeg" alt="Nuestro equipo en terreno" class="w-full h-auto object-contain rounded-lg shadow-2xl">
+                
                 <div class="absolute -bottom-6 -left-6 bg-brand-primary text-white p-6 rounded-lg shadow-xl" data-aos="zoom-in" data-aos-delay="400">
                     <span class="block text-3xl font-bold">100%</span>
                     <span class="text-sm">Garantía de Calidad</span>
@@ -141,8 +142,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="servicio-1.jpg" alt="Motor fuera de borda" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="h-56 bg-gray-50 overflow-hidden relative flex items-center justify-center p-2">
+                        <img src="servicio-1.jpg" alt="Motor fuera de borda" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
                         <i class="fas fa-ship text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
@@ -152,8 +153,8 @@
                 </div>
                 
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="servicio-2.jpg" alt="Compresor de buceo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="h-56 bg-gray-50 overflow-hidden relative flex items-center justify-center p-2">
+                        <img src="servicio-2.jpg" alt="Compresor de buceo" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
                         <i class="fas fa-water text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
@@ -163,8 +164,8 @@
                 </div>
                 
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="servicio-3.jpg" alt="Hidrolavadora" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="h-56 bg-gray-50 overflow-hidden relative flex items-center justify-center p-2">
+                        <img src="servicio-3.jpg" alt="Hidrolavadora" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
                         <i class="fas fa-spray-can text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
@@ -174,8 +175,8 @@
                 </div>
                 
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="h-48 bg-gray-300 overflow-hidden relative">
-                        <img src="servicio-4.jpg" alt="Generador Diesel" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="h-56 bg-gray-50 overflow-hidden relative flex items-center justify-center p-2">
+                        <img src="servicio-4.jpg" alt="Generador Diesel" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
                         <i class="fas fa-charging-station text-3xl text-brand-accent mb-4 group-hover:text-brand-primary transition"></i>
@@ -220,7 +221,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Correo Electrónico</h4>
-                                <p class="text-blue-100 text-sm">Dyeservicios24@gmail.com</p>
+                                <p class="text-blue-100 text-sm">dyeservicios24@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -280,8 +281,7 @@
             <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="text-white font-bold text-lg mb-4">Horario de Atención</h4>
                 <ul class="space-y-2 text-sm">
-                    <li class="flex justify-between border-b border-gray-700 pb-1"><span>Lunes a Viernes</span> <span>8:30 - 18:30</span></li>
-                    <li class="flex justify-between border-b border-gray-700 pb-1 mt-2"><span>Sábado y Domingo</span> <span class="text-brand-accent">Cerrado</span></li>
+                    <li class="flex justify-between border-b border-gray-700 pb-1"><span>Lunes a Domingo</span> <span class="text-brand-accent font-bold">24/7 (Siempre Abierto)</span></li>
                 </ul>
             </div>
         </div>
@@ -289,6 +289,10 @@
             <p>&copy; 2026 D&E Servicios SpA. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <a href="https://wa.me/56992691700" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#128C7E] hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
