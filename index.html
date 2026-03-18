@@ -35,8 +35,8 @@
         /* Ocultar barra de desplazamiento en el carrusel */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        /* Transición suave para el movimiento del carrusel */
-        .carousel-inner { transition: transform 0.6s ease-in-out; }
+        /* Ajuste de transición para el carrusel */
+        .carousel-inner { transition: transform 0.5s ease-in-out; }
     </style>
 </head>
 <body class="bg-brand-light text-gray-800 font-sans antialiased overflow-x-hidden relative">
@@ -127,25 +127,27 @@
             
             <div class="md:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000">
                 
-                <div class="relative w-full rounded-lg overflow-hidden shadow-2xl bg-brand-dark group">
-                    <div id="carousel-inner" class="carousel-inner flex w-full">
-                        <div class="min-w-full h-[600px] md:h-[750px] lg:h-[850px] flex-shrink-0 flex items-center justify-center p-2">
-                            <img src="imagen-nosotros.jpeg" alt="Nuestro equipo en terreno" class="w-full h-full object-contain object-center">
+                <div class="relative w-full h-[65vh] md:h-[80vh] min-h-[500px] max-h-[850px] rounded-lg overflow-hidden shadow-2xl bg-[#0a0f1c] group">
+                    
+                    <div id="carousel-inner" class="carousel-inner flex w-full h-full">
+                        
+                        <div class="flex-none w-full h-full flex items-center justify-center p-2 sm:p-4">
+                            <img src="imagen-nosotros.jpeg" alt="Nuestro equipo en terreno" class="w-full h-full object-contain">
                         </div>
-                        <div class="min-w-full h-[600px] md:h-[750px] lg:h-[850px] flex-shrink-0 flex items-center justify-center p-2">
-                            <img src="galeria-1.jpeg" alt="Trabajo D&E 1" class="w-full h-full object-contain object-center">
+                        <div class="flex-none w-full h-full flex items-center justify-center p-2 sm:p-4">
+                            <img src="galeria-1.jpeg" alt="Trabajo D&E 1" class="w-full h-full object-contain">
                         </div>
-                        <div class="min-w-full h-[600px] md:h-[750px] lg:h-[850px] flex-shrink-0 flex items-center justify-center p-2">
-                            <img src="galeria-2.jpeg" alt="Trabajo D&E 2" class="w-full h-full object-contain object-center">
+                        <div class="flex-none w-full h-full flex items-center justify-center p-2 sm:p-4">
+                            <img src="galeria-2.jpeg" alt="Trabajo D&E 2" class="w-full h-full object-contain">
                         </div>
-                        <div class="min-w-full h-[600px] md:h-[750px] lg:h-[850px] flex-shrink-0 flex items-center justify-center p-2">
-                            <img src="galeria-3.jpeg" alt="Trabajo D&E 3" class="w-full h-full object-contain object-center">
+                        <div class="flex-none w-full h-full flex items-center justify-center p-2 sm:p-4">
+                            <img src="galeria-3.jpeg" alt="Trabajo D&E 3" class="w-full h-full object-contain">
                         </div>
-                        <div class="min-w-full h-[600px] md:h-[750px] lg:h-[850px] flex-shrink-0 flex items-center justify-center p-2">
-                            <img src="galeria-4.jpeg" alt="Trabajo D&E 4" class="w-full h-full object-contain object-center">
+                        <div class="flex-none w-full h-full flex items-center justify-center p-2 sm:p-4">
+                            <img src="galeria-4.jpeg" alt="Trabajo D&E 4" class="w-full h-full object-contain">
                         </div>
-                        <div class="min-w-full h-[600px] md:h-[750px] lg:h-[850px] flex-shrink-0 flex items-center justify-center p-2">
-                            <img src="galeria-5.jpeg" alt="Trabajo D&E 5" class="w-full h-full object-contain object-center">
+                        <div class="flex-none w-full h-full flex items-center justify-center p-2 sm:p-4">
+                            <img src="galeria-5.jpeg" alt="Trabajo D&E 5" class="w-full h-full object-contain">
                         </div>
                     </div>
 
@@ -158,7 +160,7 @@
 
                     <div class="absolute bottom-6 left-0 right-0 flex justify-center space-x-3 z-10" id="carousel-indicators"></div>
                 </div>
-                <div class="absolute -bottom-6 -left-6 bg-brand-primary text-white p-6 rounded-lg shadow-xl z-20" data-aos="zoom-in" data-aos-delay="400">
+                <div class="absolute -bottom-6 -left-6 bg-brand-primary text-white p-6 rounded-lg shadow-xl z-20 hidden sm:block" data-aos="zoom-in" data-aos-delay="400">
                     <span class="block text-3xl font-bold">100%</span>
                     <span class="text-sm">Garantía de Calidad</span>
                 </div>
@@ -337,7 +339,7 @@
             easing: 'ease-out-cubic',
         });
 
-        // LÓGICA DEL CARRUSEL
+        // LÓGICA DEL CARRUSEL ACTUALIZADA
         const carouselInner = document.getElementById('carousel-inner');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
@@ -347,6 +349,7 @@
         let currentIndex = 0;
         let autoPlayInterval;
 
+        // Crear los puntos (indicadores)
         for (let i = 0; i < totalSlides; i++) {
             const dot = document.createElement('button');
             dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-white', 'opacity-50', 'transition', 'duration-300');
@@ -356,6 +359,7 @@
         }
 
         const updateCarousel = () => {
+            // El movimiento exacto en base al 100% estricto del contenedor
             carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
             
             Array.from(indicatorsContainer.children).forEach((dot, index) => {
@@ -396,6 +400,9 @@
             clearInterval(autoPlayInterval);
             startInterval();
         }
+
+        // Evita que la ventana al cambiar de tamaño rompa el cálculo
+        window.addEventListener('resize', updateCarousel);
 
         startInterval();
 
